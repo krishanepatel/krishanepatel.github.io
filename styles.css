@@ -1,7 +1,7 @@
 @import url('href="https://fonts.googleapis.com/css?family=EB+Garamond')
 
 "root {
-	--background: hexa('#D3D3D3');
+	--background: #D3D3D3;
 }
 
 *, *::before, *::after {
