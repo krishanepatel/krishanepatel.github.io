@@ -1,7 +1,7 @@
 @import url('href="https://fonts.googleapis.com/css?family=EB+Garamond')
 
 "root {
-	--background: rgba(220, 220, 220, .01);
+	--background: rgb(255, 255, 255);
 }
 
 *, *::before, *::after {
@@ -10,14 +10,14 @@
 
 body {
 	margin: 0;
-	background: rgb(220, 220, 220);
+	background: rgb(255, 255, 255);
 	font-family: 'EB Garamond', serif;
 	font-weight: 400;
 }
 
 .content {
 	height: 200vh;
-	background-color: rgb(220, 220, 220);
+	background-color: rgb(255, 255, 255);
 	background-size: cover;
 	display: grid;
 	place-items: center; 
