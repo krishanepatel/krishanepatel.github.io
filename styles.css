@@ -55,6 +55,7 @@
 }
 
 .navbar__links{
+color: #fff;
 display: flex;
 align-items: center;
 justify-content: center;
