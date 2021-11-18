@@ -30,7 +30,7 @@
 }
 
 #navbar__logo {
-  background-color: #a8a8a8;
+  background-color: #000000;
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -117,7 +117,7 @@
   }
 
   .navbar__menu.active {
-    background: #a8a8a8;
+    background: #d4d3d3;
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -135,7 +135,7 @@
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background: #a8a8a8;
+    background: #000000;
   }
 
   .navbar__item {
