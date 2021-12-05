@@ -191,7 +191,7 @@
 } 
   .hero {
     background:#ffffff;
-     padding: 100px 0;
+     padding: 0.8rem 0;
   }
 
   .hero__container{
@@ -203,14 +203,98 @@
     margin: 0 auto;
     height: 90%;
     text-align: center;
-    padding: 20px;
+    padding: 0.2rem;
+    background:#ffffff;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
   }
 
+  .hero__image{
+    padding: 2em;
+    max-width: 50%;
+    height: auto;
+    justify-content: left;
+
+  }
   .hero__heading{
-      font-size: 100px;
-      margin-bottom: 24px;
+      font-size: 8rem;
+      margin-bottom: 5px;
       color: #000000;
   }
-  
+  #content {
+    background-color: #ffffff;
+    padding: 0.35rem;
+    display: flex;
+  }
 
-  #responsive-image {  width: 50%;  height: auto; } 
+  #left {
+    background-color: #ffffff;  
+    flex-grow: 1;
+    color: #000;
+    width: 50%;
+    align-items: center;
+ justify-content: center;   
+  text-align: center;
+  }
+  #right {
+    background-color: #ffffff;  
+    flex-grow: 1;
+    color: #000;
+    width: 50%;
+  }
+
+  .title { 
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.35rem;
+    text-align: center; 
+    background-color: #ffffff; }
+  #responsive-image {  width: 50%;  height: auto; }
+
+
+  .news {
+    background:#AAA0A0;
+    padding: 0.1rem 0;
+  }
+
+  .news__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 0.2rem;
+    background:#AAA0A0;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+  }
+
+  .About__container,.about__left,.about__right{
+    background:#aaa0a091 ;
+    height:100%;
+    max-width: 1200px;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    padding: 0.2rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .About__heading{
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 0.8rem;
+    align-items: center;
+  }
