@@ -10,12 +10,12 @@
         <link rel="shortcut icon" href="images/fav-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar">
+       <nav class="navbar">
             <div class="navbar__container">
-              <a href="#home" id="navbar__logo">Krishane Patel</a>
+              <a href="index.html" id="navbar__logo">Krishane Patel</a>
               <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -23,38 +23,39 @@
               </div>
               <ul class="navbar__menu">
                 <li class="navbar__item">
-                  <a href="#home" class="navbar__links" id="home-page">Home</a>
+                  <a href="index.html" class="navbar__links" id="home-page">Home</a>
+               </li>
+                <li class="navbar__item">
+                  <a href="About.html" class="navbar__links" id="about-page">About</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#about" class="navbar__links" id="about-page">About</a>
+                  <a href="Research.html" class="navbar__links" id="research-page"
+                    >Research</a>
                 </li>
                 <li class="navbar__item">
                   <a href="#services" class="navbar__links" id="services-page"
                     >Services</a>
-                </li>
-                <li class="navbar__item">
-                  <a href="#research" class="navbar__links" id="research-page"
-                    >Research</a>
                 </li>
               </ul>
             </div>
           </nav>
 
           <!---Hero section-->
+          
           <div class="hero" id="home">
               <div class="hero__container">
-                <div class="row">
-                  <div class="column" style="background-color:#ffffff;">
-                    <h2>Welcome to Krishane's portfolio page</h2>
-                    <p>Krishane is currently a Research Fellow in Behavioural Science at the University of Warwick.</p>
-                    <p>Research interests: behaviour change; behavioural economics; judgements and decision-making; cognitive science</p>
-                  </div>
-                  <div class="column" style="background-color:#ffffff;">
-                   <img src="Images/Profile.jpg" alt="Profile image of Krishane Patel" id="profile__picture" width = 200rem>
-                  </div>
-                </div>
+                <div id="content">
+                  <div id="hero__image"> <img src="Images/Profile.jpg" alt="Image of Krishane" width=30%> </div>
               </div>
           </div>
+          </div>
+
+          <div class="news" id="newstab">
+  <div class = "news__container">
+    <h1>News</h1>
+  </div>
+
+</div>
 
         <script src="app.js"></script>
     </body>
