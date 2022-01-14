@@ -92,7 +92,7 @@
 }
 
 .navbar__links:hover {
-  color: #65855f;
+  color: #919191ab;
   transition: all 0.3s ease;
 }
 
@@ -301,7 +301,14 @@
 
   .Researchblock__A{
     width: 80%;
-    padding:0.3em;
+    padding:1.3em;
     font-size: 0.9rem;
     background-color:#4e7547b9;
   }
+
+    .Researchblock__B{
+      width: 80%;
+      padding:1.3em;
+      font-size: 0.9rem;
+      background-color:#ffffff;
+    }
