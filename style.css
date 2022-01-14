@@ -298,3 +298,10 @@
     margin: 0.8rem;
     align-items: center;
   }
+
+  .Researchblock__A{
+    width: 80%;
+    padding:0.3em;
+    font-size: 0.9rem;
+    background-color:#4e7547b9;
+  }
