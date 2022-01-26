@@ -302,32 +302,33 @@
 
   .Researchblock__A{
     width: 80%;
-    padding:0.5em;
+    padding-left:0.5em;
     font-size: 0.9rem;
-    background-color:#e9e9e9;
+    background-color:#3d72826c;
     margin: 1em;
+    padding: 2em;
   }
 
   .Researchblock__B{
     width: 80%;
-    padding:0.5em;
     font-size: 0.9rem;
-    background-color:#e9e9e9;
+    background-color:#df6e5c59;
     margin: 1em;
+    padding: 2em;
   }
 
   .Researchblock__C{
     width: 80%;
-    padding:0.5em;
     font-size: 0.9rem;
-    background-color:#e9e9e9;
+    background-color:#df6e5c59;
     margin: 1em;
+    padding: 2em;
   }
   .Researchblock__D{
     width: 80%;
-    padding:0.5em;
     font-size: 0.9rem;
-    background-color:#e9e9e9;
+    padding: 2em;
+    background-color:#3d72826c;
     margin: 1em;
   }
 
@@ -337,5 +338,36 @@
   
   .Block{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    justify-items: center;
+    gap: 1rem;
+    grid-auto-flow: dense;
+  }
+  .collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }  
+  .content{
+    /*
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    */
+    display:none;
+    overflow: auto;
+    grid-column: 1 / -1;
+
+  }
+
+  .active, .collapsible:hover {
+    background-color: #ccc;
+display: block;
   }
