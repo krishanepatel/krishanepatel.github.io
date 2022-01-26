@@ -339,9 +339,12 @@
   .Block{
     display: grid;
     grid-template-columns: repeat(auto-fit, 20rem);
-    justify-items: center;
+  /* justify-items: center;*/
     gap: 1rem;
     grid-auto-flow: dense;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 1rem;
   }
   .collapsible {
     background-color: #eee;
@@ -350,11 +353,26 @@
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
     font-size: 15px;
   }  
-  .content{
+  .contentB{
+    /*
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    */
+    display:none;
+    overflow: auto;
+    grid-column: 1 / -2;
+    background: #df6e5c59;
+    display:inline-block;
+padding: 1rem;
+width: 100%;
+  }
+  .contentA{
     /*
     background-color: white;
     max-height: 0;
@@ -364,10 +382,11 @@
     display:none;
     overflow: auto;
     grid-column: 1 / -1;
-
+    background: #3d72826c;
+    display:inline-block;
+ padding: 1rem;
+  width: 100%;
   }
-
-  .active, .collapsible:hover {
-    background-color: #ccc;
+  .active, .collapsibleA:hover{
 display: block;
   }
