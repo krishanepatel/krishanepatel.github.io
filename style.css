@@ -338,6 +338,9 @@
   
   .Block{
     display: grid;
+@media only screen and (max-width: 767px){
+  width: 60%
+}
     grid-template-columns: repeat(auto-fit, 20rem);
   /* justify-items: center;*/
     gap: 1rem;
