@@ -10,7 +10,6 @@ const mobileMenu = () => {
 menu.addEventListener('click', mobileMenu)
 
 //Collapsible section
-
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -23,35 +22,26 @@ for (i = 0; i < coll.length; i++) {
     } else {
       content.style.display = "block";
     }
-  });
-}
-
-//Animated collapsible
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
     if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+        content.style.maxHeight = null;
+    } else{
+        content.style.maxHeight = content.scrollHeight + "px";
     }
-  });
+    });
 }
 
 //Limit collapsible
 var acc = document.getElementsByClassName("collapsible");
-var panel = document.querySelectorAll('[class="Content"]');
+var panelA = document.querySelectorAll('contentA');
+var panelB = document.querySelectorAll('contentB');
 
 for (var i = 0; i < acc.length; i++) {
     acc[i].onclick = function() {
     	var setClasses = !this.classList.contains('active');
         setClass(acc, 'active', 'remove');
-        setClass(panel, 'show', 'remove');
-       
+        setClass(panelA, 'show', 'remove');
+        setClass(panelB, 'show', 'remove');
+
        	if (setClasses) {
             this.classList.toggle("active");
             this.nextElementSibling.classList.toggle("show");
