@@ -411,3 +411,45 @@ display: block;
   right: 40px;
   width: 25%;
 }
+.Block_services{
+  display: grid;
+  padding-top: 2rem;
+@media only screen and (max-width: 767px){
+width: 60%;
+align-items: center;
+}
+
+grid-template-columns: repeat(auto-fit, 20rem);
+/* justify-items: center;*/
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem;
+}
+
+.service_contentA{
+  /*
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  */
+  font-size: 1.2rem;
+  display:none;
+  overflow: auto;
+  grid-column: 1 / -1;
+  background: #ffffff;
+  display:inline-block;
+padding: 2rem;
+margin: 1rem;
+width:100%;
+}
+
+.clients_FairbankingFoundation{
+  padding: 3rem;
+}
+
+.clients_SwissRe{
+  padding:3rem;
+}
