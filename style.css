@@ -453,3 +453,17 @@ width:100%;
 .clients_SwissRe{
   padding:3rem;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1-rem 20rem;
+}
+.clients__column {
+  flex: 50%;
+  padding: 8rem 400px;
+}
+.clients__column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
