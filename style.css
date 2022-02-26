@@ -281,7 +281,7 @@
   .About__container,.about__left,.about__right{
     background:#aaa0a091 ;
     height:100%;
-    max-width: 1200px;
+    min-width: 100vh;
     -moz-column-count: 2;
     -moz-column-gap: 20px;
     -webkit-column-count: 2;
@@ -297,6 +297,7 @@
     font-size: 0.9rem;
     text-align: left;
     margin: 0.8rem;
+    min-height: 100%;
     align-items: center;
   }
 
