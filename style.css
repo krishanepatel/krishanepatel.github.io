@@ -401,14 +401,13 @@ display: block;
   object-fit: cover;
 }
 
-
 .hero__subcontainer{
   position: relative;
   text-align: center;
   color: black;
 }
 .bottom-right {
-  position: relative;
+  position: absolute;
   bottom: 8px;
   right: 40px;
   width: 25%;
