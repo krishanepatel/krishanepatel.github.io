@@ -408,7 +408,7 @@ display: block;
   color: black;
 }
 .bottom-right {
-  position: absolute;
+  position: relative;
   bottom: 8px;
   right: 40px;
   width: 25%;
