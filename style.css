@@ -408,8 +408,8 @@ display: block;
 }
 .bottom-right {
   position: absolute;
-  bottom: 3px;
-  right: 325px;
+  bottom: 105px;
+  right: 410px;
   width: 25%;
   font-size:0.8rem;
 }
