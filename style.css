@@ -397,8 +397,8 @@ width: 100%;
 display: block;
   }
 .hero__image{
-  width: 25%; 
-  object-fit: cover;
+  width: 2%; 
+  object-it: cover;
 }
 
 .hero__subcontainer{
@@ -408,9 +408,10 @@ display: block;
 }
 .bottom-right {
   position: absolute;
-  bottom: 8px;
-  right: 40px;
+  bottom: 3px;
+  right: 325px;
   width: 25%;
+  font-size:0.8rem;
 }
 .Block_services{
   display: grid;
