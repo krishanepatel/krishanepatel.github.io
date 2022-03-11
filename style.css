@@ -362,32 +362,32 @@
     outline: none;
     font-size: 15px;
   }  
-  .contentB{
+/*  .contentB{
     /*
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    */
+    
     display:none;
     overflow: auto;
     grid-column: 1 / -1;
-    background: #df6e5c59;
+    /*background: #df6e5c59;
     display:inline-block;
 padding: 1rem;
 width: 100%;
   }
-  .contentA{
-    /*
+*/
+  .content{
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    */
+
     display:none;
     overflow: auto;
     grid-column: 1 / -1;
-    background: #3d72826c;
+    /*background: #3d72826c;*/
     display:inline-block;
  padding: 1rem;
   width: 100%;
@@ -409,7 +409,7 @@ display: block;
 .bottom-right {
   position: absolute;
   bottom: 105px;
-  right: 410px;
+  right: 4100px;
   width: 25%;
   font-size:0.8rem;
 }
@@ -469,3 +469,11 @@ width:100%;
   margin-top: 8px;
   vertical-align: middle;
 }
+div.content {
+  display: none;
+}
+
+div.content.show {
+  display: block !important;
+}
+
