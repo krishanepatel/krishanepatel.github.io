@@ -335,7 +335,9 @@
   }
 
   .Header__title1,.Header__title2{
-    padding: 1em 
+    padding-left: 1em;
+    padding-right:1em;
+    padding-top:0.5em;
   }
   
   .Block{
@@ -477,3 +479,13 @@ div.content.show {
   display: block !important;
 }
 
+.publications {
+  padding-left: 2em;
+  padding-right:2em;
+  padding-top:1em;
+}
+.grants {
+  padding-left: 2em;
+  padding-right:2em;
+  padding-top:1em;
+}

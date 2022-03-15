@@ -74,3 +74,8 @@ for (i = 0; i < x.length; i++){
         i++;
     }
 }
+
+var $myGroup = $('#Block');
+    $myGroup.on('show','.content', function() {
+        $myGroup.find('.content').collapse('hide');
+    });
