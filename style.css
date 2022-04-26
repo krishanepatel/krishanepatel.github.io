@@ -395,6 +395,21 @@ width: 100%;
   width: 100%;
   }
 
+
+  .content2{
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size:1.15rem;
+    display:none;
+    overflow: auto;
+    grid-column: 1 / -1;
+    /*background: #3d72826c;*/
+    display:inline-block;
+ padding: 1rem;
+  width: 100%;
+  }
   .active, .collapsibleA:hover{
 display: block;
   }
@@ -479,6 +494,13 @@ div.content.show {
   display: block !important;
 }
 
+div.content2 {
+  display: none;
+}
+
+div.content2.show {
+  display: block !important;
+}
 .publications {
   padding-left: 2em;
   padding-right:2em;
@@ -503,6 +525,6 @@ div.content.show {
 }
 
 .references__blog1{
-  margin-top; 1rem;
+  margin-top: 1rem;
   padding: 2rem;
 }

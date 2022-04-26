@@ -75,7 +75,34 @@ for (i = 0; i < x.length; i++){
     }
 }
 
+
+var x = document.getElementsByClassName("content2");
+var i;
+var c;
+
+//specify the colors you want to use
+var colors = ["#FFE5B4", "#FFF9E3"];
+var d = colors.length;
+
+for (i = 0; i < x.length; i++){
+    while (i < d) {
+        c = i;
+        var random_color = colors[c];
+        x[i].style.background = random_color;
+        i++;
+    }
+    while (i >= d) {
+        var random_color = colors[Math.floor(Math.random() * colors.length)];
+        x[i].style.background = random_color;
+        i++;
+    }
+}
+
 var $myGroup = $('#Block');
     $myGroup.on('show','.content', function() {
         $myGroup.find('.content').collapse('hide');
+    });
+var $myGroup = $('#Block');
+    $myGroup.on('show','.content2', function() {
+        $myGroup.find('.content2').collapse('hide');
     });
