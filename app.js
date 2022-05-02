@@ -31,16 +31,14 @@ for (i = 0; i < coll.length; i++) {
 }
 
 //Limit collapsible
-var acc = document.getElementsByClassName("collapsible");
-var panelA = document.querySelectorAll('contentA');
-var panelB = document.querySelectorAll('contentB');
+var acc = document.getElementsByClassName("block");
+var panelA = document.getElementsByClassName('content');
 
 for (var i = 0; i < acc.length; i++) {
     acc[i].onclick = function() {
     	var setClasses = !this.classList.contains('active');
         setClass(acc, 'active', 'remove');
         setClass(panelA, 'show', 'remove');
-        setClass(panelB, 'show', 'remove');
 
        	if (setClasses) {
             this.classList.toggle("active");
@@ -54,3 +52,57 @@ function setClass(els, className, fnName) {
         els[i].classList[fnName](className);
     }
 }
+
+var x = document.getElementsByClassName("content");
+var i;
+var c;
+
+//specify the colors you want to use
+var colors = ["#df6e5c59", "#3d72826c"];
+var d = colors.length;
+
+for (i = 0; i < x.length; i++){
+    while (i < d) {
+        c = i;
+        var random_color = colors[c];
+        x[i].style.background = random_color;
+        i++;
+    }
+    while (i >= d) {
+        var random_color = colors[Math.floor(Math.random() * colors.length)];
+        x[i].style.background = random_color;
+        i++;
+    }
+}
+
+
+var x = document.getElementsByClassName("content2");
+var i;
+var c;
+
+//specify the colors you want to use
+var colors = ["#FFE5B4", "#FFF9E3"];
+var d = colors.length;
+
+for (i = 0; i < x.length; i++){
+    while (i < d) {
+        c = i;
+        var random_color = colors[c];
+        x[i].style.background = random_color;
+        i++;
+    }
+    while (i >= d) {
+        var random_color = colors[Math.floor(Math.random() * colors.length)];
+        x[i].style.background = random_color;
+        i++;
+    }
+}
+
+var $myGroup = $('#Block');
+    $myGroup.on('show','.content', function() {
+        $myGroup.find('.content').collapse('hide');
+    });
+var $myGroup = $('#Block');
+    $myGroup.on('show','.content2', function() {
+        $myGroup.find('.content2').collapse('hide');
+    });
