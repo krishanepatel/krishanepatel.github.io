@@ -81,7 +81,7 @@ var i;
 var c;
 
 //specify the colors you want to use
-var colors = ["#FFE5B4", "#FFF9E3"];
+var colors = ["#FFEFCE", "#E8E9FF"];
 var d = colors.length;
 
 for (i = 0; i < x.length; i++){

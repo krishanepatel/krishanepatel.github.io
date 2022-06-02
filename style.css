@@ -279,7 +279,7 @@
     -webkit-column-gap: 20px;
   }
 
-  .About__container,.about__left,.about__right{
+  .About__container{
     background:#aaa0a091 ;
     height:100%;
     min-width: 100vh;
@@ -287,19 +287,18 @@
     -moz-column-gap: 20px;
     -webkit-column-count: 2;
     -webkit-column-gap: 20px;
-    padding: 0.2rem; 
+    padding: 3rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    font-size: 1.2rem;
     text-align: left;
   }
   .About__heading{
-    font-size: 0.9rem;
+    line-height:1.6rem;
     text-align: left;
     margin: 0.8rem;
     min-height: 100%;
-    align-items: center;
   }
 
   .Researchblock__A{
