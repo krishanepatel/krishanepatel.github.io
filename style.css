@@ -281,10 +281,10 @@
 
   .About__image{
     float: left;
-    padding: 1rem;
+    padding: 1.5rem;
   }
   .About__text{
-    padding: 1rem;
+    padding: 0rem;
     line-height: 1.75rem;
   }
   .About__container{
