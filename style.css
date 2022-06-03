@@ -279,21 +279,23 @@
     -webkit-column-gap: 20px;
   }
 
+  .About__image{
+    float: left;
+    padding: 1rem;
+  }
+  .About__text{
+    padding: 1rem;
+    line-height: 1.75rem;
+  }
   .About__container{
-    background:#cbcbcb91 ;
+    background:#fffdffd;
     height:100%;
     min-width: 100vh;
-    -moz-column-count: 2;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 20px;
     padding: 3rem; 
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     font-size: 1.2rem;
-    text-align: left;
   }
+
   .About__heading{
     line-height:1.6rem;
     text-align: left;
