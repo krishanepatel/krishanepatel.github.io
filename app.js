@@ -95,7 +95,7 @@ for (i = 0; i < x.length; i++){
         var random_color = colors[Math.floor(Math.random() * colors.length)];
         x[i].style.background = random_color;
         if (x[i].style.background = "#326342")
-            {x[i].style.color = "#ffffff"}
+            {x[i].style.color == "#ffffff"}
         i++;
     }
 }
