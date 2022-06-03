@@ -81,7 +81,7 @@ var i;
 var c;
 
 //specify the colors you want to use
-var colors = ["#FFEFCE", "#E8E9FF"];
+var colors = ["#f1f1f1", "#326342"];
 var d = colors.length;
 
 for (i = 0; i < x.length; i++){
@@ -94,6 +94,8 @@ for (i = 0; i < x.length; i++){
     while (i >= d) {
         var random_color = colors[Math.floor(Math.random() * colors.length)];
         x[i].style.background = random_color;
+        if (x[i].style.background = "#326342")
+            {x[i].style.color = "#ffffff"}
         i++;
     }
 }
