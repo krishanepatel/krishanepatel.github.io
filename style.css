@@ -408,8 +408,9 @@ width: 100%;
     grid-column: 1 / -1;
     /*background: #3d72826c;*/
     display:inline-block;
- padding: 1rem;
+ padding: 3rem;
   width: 100%;
+  margin-top: 1rem;
   }
   .active, .collapsibleA:hover{
 display: block;
@@ -527,5 +528,5 @@ div.content2.show {
 
 .references__blog1{
   margin-top: 1rem;
-  padding: 2rem;
+  padding: 0rem;
 }
