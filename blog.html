@@ -12,16 +12,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
-<script src="jquery.js"></script> 
-<script> 
-$(function () {
-  var includes = $('[data-include]')
-  $.each(includes, function () {
-    var file = 'blog' + $(this).data('include') + '.html'
-    $(this).load(file)
-  })
-})
-</script> 
     </head>
     <body>
       <nav class="navbar">
@@ -60,12 +50,40 @@ $(function () {
           <h2><strong>What is behaviour?</strong></h2>
           <br></button>
           <div class = "content2" style="display:none;">
-            <div data-include="blog__1"></div>
+          <p>This question may appear like a nonsensical idea. You may have read that question, and immediately thought "behaviour is intuitive, it's simply what I do...right?". This is where things can get somewhat peculiar, does a vending machine behave? Can a driverless vehicle behave? Although these entities are not living, the idea of these entities possessing some sort of behaviour does not seem as radical as at first glance. It seems like there is something instrinc about the idea of behaviour, not limited to just people but a more abstract notion of behaviour. Early models of behaviour were based on notions of <strong>Stimulus</strong>-<strong>Response</strong> models (Thorndike, 1989). In such theories, a response is generated with respect to given stimuli, by varying stimulus factors (for example magnitude, number and timing) one can determine the strengths of those stimuli by observing the response. Thorndike's studies are considered some of the cornerstone principles in the history of psychology, and are worthy of further exploration in a future post. For now, we can understand the basics of the stimulus-response model. In this model, inputs are converted to outputs purely from a simple linear perspective of information processing. A loud bang would elicit a survival mechanism to prick up ones ears and engage readiness to fleet in response. In the same manner, internal states of hunger can generate a desire to reach out for fruit resting on the kitchen counter. From this perspective we can argue that: </p>
+          <em><br><p style="text-align: center;">Behaviour = &fnof; (stimulus)</p><br></em>
+          We can further expand on this model, as we can regard this as highly parsimonuous, in that it can explain a great deal in the minimal number of factors .
+            
+            
+          Kurt Lewin, a famous psychologist put forward the idea that behaviour was a combination of internal and external factors (Lewin, 1936). Lewin suggested a concise model which was depicted as such:</p>
+          <em><br><p style="text-align: center;">Behaviour = &fnof;(P,E)</p><br></em>
+          <p style="text-align: left;">In this equation, behaviour is the output of the function comprised of internal representation of the entity (<em>P</em>) and the environment (<em>E</em>). In this manner, behaviour can be understood as the result of a process which integrates two systems, an internal and external representation.&nbsp; This model allows us to make two important distinctions:
+             <ul style="padding:1rem;">
+              <br>
+            <li>The environment can influence our behaivour</li>
+            <li>There are internal states that also compete to influence our behaviour</li><br>
+          </ul></p>
+          <p>This model is best illustrated in the example of monozygotic Vs. dizygotic twin studies. Under the paradigm of twin studies, one seeks to explain how the environment and genetic factors influence a given outcome (Sahu & Prasuna, 2016). This is achieved by holding the environment constant but allowing for variation between twin formations. In one twin set, the twins arise from the same zygote and therefore share 100% of their DNA. The second formation involves the release of two seperate eggs, thus creating two distinct zygotes. Dizygotic twins only share 50% of their genetic make-up. Therefore by comparing  monozygotic and dizygotic twins, one can investigate the effects of genetic components whilst accounting for environmental factors. </p>
+          <br>
+          <p class = "indent__para">
+            These ideas provide a really helpful benchmark in understanding how factors influence behaviour. These ideas are central to mainstream theories in psychology and the behavioural sciences which we can explore in more detail in a later post. It is important to note how such models integrate the impact of both internal and external states. 
+          </p>
+                   <div class = "references__blog1">
+            <hr>
+            <br> 
+            <h2>References</h2><br>
+            Lewin, K. (1936a). Principles of topological psychology. New York, NY: McGraw-Hill.
+            <br><br>
+            Sahu, M., & Prasuna, J. G. (2016). Twin studies: A unique epidemiological tool. Indian journal of community medicine: official publication of Indian Association of Preventive & Social Medicine, 41(3), 177.
+            <br>
+            Thorndike, E. L. (1898). Animal intelligence: An experimental study of the associative processes in animals. The Psychological Review: Monograph Supplements, 2(4), i.
+            </p>
         </div> </div>
         <button type="button" class="collapsible" id="blog_block">
           <h2><strong>Coming soon!</strong></h2>
           <br></button>
-          <div class = "content2" style="display:none;">  <p>Post coming soon!</p>
+          <div class = "content2" style="display:none;">  
+            <p>Post coming soon!</p>
           </div>
         <button type="button" class="collapsible" id="blog_block">
           <h2><strong>Coming soon!</strong></h2>
