@@ -82,6 +82,7 @@ var c;
 
 //specify the colors you want to use
 var colors = ["#f1f1f1", "#326342"];
+var font_col = ['black','white']
 var d = colors.length;
 
 for (i = 0; i < x.length; i++){
@@ -89,11 +90,17 @@ for (i = 0; i < x.length; i++){
         c = i;
         var random_color = colors[c];
         x[i].style.background = random_color;
+        if (random_color = colors[2]){
+            x[i].style.color = "white"}
+            else {x[i].style.color = "black"}
         i++;
     }
     while (i >= d) {
         var random_color = colors[Math.floor(Math.random() * colors.length)];
         x[i].style.background = random_color;
+        if (random_color = colors[2]){
+        x[i].style.color = "white"}
+        else {x[i].style.color = "black"}
         i++;
     }
 }
