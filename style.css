@@ -530,3 +530,7 @@ div.content2.show {
   margin-top: 1rem;
   padding: 0rem;
 }
+
+.content2{
+  background-color: #f1f1f1;
+}

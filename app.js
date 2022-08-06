@@ -53,58 +53,6 @@ function setClass(els, className, fnName) {
     }
 }
 
-var x = document.getElementsByClassName("content");
-var i;
-var c;
-
-//specify the colors you want to use
-var colors = ["#df6e5c59", "#3d72826c"];
-var d = colors.length;
-
-for (i = 0; i < x.length; i++){
-    while (i < d) {
-        c = i;
-        var random_color = colors[c];
-        x[i].style.background = random_color;
-        i++;
-    }
-    while (i >= d) {
-        var random_color = colors[Math.floor(Math.random() * colors.length)];
-        x[i].style.background = random_color;
-        i++;
-    }
-}
-
-
-var x = document.getElementsByClassName("content2");
-var i;
-var c;
-
-//specify the colors you want to use
-var colors = ["#f1f1f1", "#a5c9b1"];
-var font_col = ['black','white']
-var d = colors.length;
-
-for (i = 0; i < x.length; i++){
-    while (i < d) {
-        c = i;
-        var random_color = colors[c];
-        x[i].style.background = random_color;
-        if (random_color = colors[2]){
-            x[i].style.color = "white"}
-            else {x[i].style.color = "black"}
-        i++;
-    }
-    while (i >= d) {
-        var random_color = colors[Math.floor(Math.random() * colors.length)];
-        x[i].style.background = random_color;
-        if (random_color = colors[2]){
-        x[i].style.color = "white"}
-        else {x[i].style.color = "black"}
-        i++;
-    }
-}
-
 var $myGroup = $('#Block');
     $myGroup.on('show','.content', function() {
         $myGroup.find('.content').collapse('hide');
