@@ -81,7 +81,7 @@ var i;
 var c;
 
 //specify the colors you want to use
-var colors = ["#f1f1f1", "#326342"];
+var colors = ["#f1f1f1", "#a5c9b1"];
 var font_col = ['black','white']
 var d = colors.length;
 
