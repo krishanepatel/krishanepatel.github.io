@@ -61,3 +61,4 @@ var $myGroup = $('#Block');
     $myGroup.on('show','.content2', function() {
         $myGroup.find('.content2').collapse('hide');
     });
+
