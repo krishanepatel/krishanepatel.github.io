@@ -534,3 +534,36 @@ div.content2.show {
 .content2{
   background-color: #f1f1f1;
 }
+
+#gform {
+  position:relative;
+  width:100%;
+  padding:0px 5% 0px 10px;
+  box-sizing:border-box;
+}
+
+#page-container textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  }
+
+input[type="text"]
+{
+    background-color: #fff;
+    color: #000;
+    width: 75%;
+    height:30px;
+}
+
+
+label[for="entry.2068596310"]
+{
+  font-size: 1.2rem;
+}
+
+label[for="entry.1688535613"]
+{
+font-size: 1.2rem;
+}
+  
