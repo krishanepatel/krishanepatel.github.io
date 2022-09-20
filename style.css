@@ -566,4 +566,31 @@ label[for="entry.1688535613"]
 {
 font-size: 1.2rem;
 }
-  
+
+.machine,.machine__container{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.machine{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cog__large, .cog__medium, .cog__small{
+  animation: rotate-right 6s linear infinite;
+}
+
+@keyframes rotate-rights
+  {
+    from 
+    {
+     transform: rotateZ(0);
+    }
+    to
+    {
+     transform: rotateZ(360);
+    }
+   }  
