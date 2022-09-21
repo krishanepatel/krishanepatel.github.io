@@ -288,7 +288,7 @@
     line-height: 1.75rem;
   }
   .About__container{
-    background:#fffdffd;
+    background:#fffFff;
     height:100%;
     min-width: 100vh;
     padding: 3rem; 
@@ -573,13 +573,28 @@ font-size: 1.2rem;
   box-sizing: border-box;
 }
 .machine{
-  height: 100vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cog__large, .cog__medium, .cog__small{
+.cog__large{
+  position:absolute;
+  top:58%;
+  left: 40%;
+  animation: rotate-right 6s linear infinite;
+}
+.cog__medium{
+  position:absolute;
+  top:58%;
+  left: 46.2%;
+  animation: rotate-left 6s linear infinite;
+}
+.cog__small{
+  position:absolute;
+  top: 65.1%;
+  left: 49.5%;
   animation: rotate-right 6s linear infinite;
 }
 
@@ -591,6 +606,19 @@ font-size: 1.2rem;
     }
     to
     {
-     transform: rotateZ(360);
+     transform: rotateZ(-360deg);
     }
    }  
+
+
+@keyframes rotate-left
+{
+  from 
+  {
+   transform: rotateZ(0);
+  }
+  to
+  {
+   transform: rotateZ(360deg);
+  }
+ }  
