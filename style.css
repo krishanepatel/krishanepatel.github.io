@@ -583,7 +583,7 @@ font-size: 1.2rem;
   animation: rotate-right 6s linear infinite;
 }
 
-@keyframes rotate-rights
+@keyframes rotate-right
   {
     from 
     {
