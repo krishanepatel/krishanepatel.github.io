@@ -622,3 +622,24 @@ font-size: 1.2rem;
    transform: rotateZ(360deg);
   }
  }  
+ .box{
+  position:absolute;
+  top: 54%;
+  left: 36.5%;
+}
+
+.belt.in{
+  position:absolute;
+  top: 5%;
+  left: 25%;
+}
+
+.belt.out{
+  position:absolute;
+  top: 40%;
+  left: 75%;
+}
+
+.package1{
+  background: #ffffff;
+}
