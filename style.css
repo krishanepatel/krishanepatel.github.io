@@ -570,11 +570,13 @@ font-size: 1.2rem;
   padding: 0;
   box-sizing: border-box;
 }
+
 .machine{
   height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  columns: 3;
 }
 
 .cog__large{
@@ -594,6 +596,10 @@ font-size: 1.2rem;
   top: 65.1%;
   left: 49.5%;
   animation: rotate-right 6s linear infinite;
+}
+.box{
+  align-items: center;
+  position: relative;
 }
 
 @keyframes rotate-right
@@ -625,7 +631,7 @@ font-size: 1.2rem;
   top: 54%;
   left: 36.5%;
 }
-
+/* 
 .belt.in{
   position:absolute;
   top: 5%;
@@ -636,8 +642,29 @@ font-size: 1.2rem;
   position:absolute;
   top: 40%;
   left: 75%;
+} */
+
+/* 
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.package1{
-  background: #ffffff;
+.parcel_2 {
+  width: 20px;
+  height: 20px;
+  left: -800px;
+  position: relative;
+  background-color: red;
 }
+.box_2 {
+  width: 20px;
+  height: 20px;
+  left: 9px;
+  position: relative;
+  background-color: red;
+} */
