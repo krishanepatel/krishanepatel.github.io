@@ -62,3 +62,23 @@ var $myGroup = $('#Block');
         $myGroup.find('.content2').collapse('hide');
     });
 
+    var parcel_2 = document.getElementById("#parcel_2");   
+    var currentPos = 0;
+    
+    var requestAnimationFrame = window.requestAnimationFrame ||
+                        window.mozRequestAnimationFrame ||
+                        window.webkitRequestAnimationFrame ||
+                        window.msRequestAnimationFrame;
+   
+   function movething(){
+   currentPos+=5;
+   parcel_2.style.left = currentPos+"px";
+   
+   if(Math.abs(currentPos) >=900){
+   currentPos=300;
+   }
+
+   requestAnimationFrame(movething);
+
+  }
+  
