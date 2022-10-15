@@ -345,7 +345,7 @@
     display: grid;
 
     grid-template-columns: repeat(auto-fit, 20rem);
-  /* justify-items: center;*/
+    justify-items: center;
     gap: 1rem;
     grid-auto-flow: dense;
     grid-auto-columns: 1fr;
@@ -391,7 +391,7 @@ width: 100%;
     /*background: #3d72826c;*/
     display:inline-block;
  padding: 1rem;
-  width: 100%;
+  width: 85%;
   }
 
 
@@ -407,7 +407,7 @@ width: 100%;
     /*background: #3d72826c;*/
     display:inline-block;
  padding: 3rem;
-  width: 100%;
+  width: 85%;
   margin-top: 1rem;
   }
   .active, .collapsibleA:hover{
@@ -599,7 +599,7 @@ font-size: 1.2rem;
 }
 .box{
   align-items: center;
-  position: relative;
+  position: absolute;
 }
 
 @keyframes rotate-right
