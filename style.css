@@ -391,7 +391,7 @@ width: 100%;
     /*background: #3d72826c;*/
     display:inline-block;
  padding: 1rem;
-  width: 85%;
+  width: 90%;
   }
 
 
@@ -407,7 +407,7 @@ width: 100%;
     /*background: #3d72826c;*/
     display:inline-block;
  padding: 3rem;
-  width: 85%;
+  width: 90%;
   margin-top: 1rem;
   }
   .active, .collapsibleA:hover{
