@@ -581,19 +581,19 @@ font-size: 1.2rem;
 
 .cog__large{
   position:absolute;
-  top:58%;
+  top:88%;
   left: 40%;
   animation: rotate-right 6s linear infinite;
 }
 .cog__medium{
   position:absolute;
-  top:58%;
+  top:88%;
   left: 46.2%;
   animation: rotate-left 6s linear infinite;
 }
 .cog__small{
   position:absolute;
-  top: 65.1%;
+  top: 95.1%;
   left: 49.5%;
   animation: rotate-right 6s linear infinite;
 }
