@@ -53,16 +53,12 @@
   list-style: none;
 }
 
-.navbar__item {
-  height: 80px;
-}
-
 .navbar__links {
   color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 125px;
+  justify-content: space-evenly;
+  width: 150px;
   text-decoration: none;
   height: 100%;
   transition: all 0.3s ease;
@@ -74,6 +70,7 @@
   align-items: center;
   padding: 0 1rem;
   width: 100%;
+  
 }
 
 .button {
