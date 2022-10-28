@@ -1,3 +1,4 @@
+// Navbar menu
 const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar__menu')
 
@@ -9,7 +10,8 @@ const mobileMenu = () => {
 
 menu.addEventListener('click', mobileMenu)
 
-//Collapsible section
+// Accordian control
+
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -30,55 +32,46 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-//Limit collapsible
-var acc = document.getElementsByClassName("block");
-var panelA = document.getElementsByClassName('content');
+// Accordian control
 
-for (var i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-    	var setClasses = !this.classList.contains('active');
-        setClass(acc, 'active', 'remove');
-        setClass(panelA, 'show', 'remove');
+var acc = document.querySelectorAll('.collapsible');
 
-       	if (setClasses) {
-            this.classList.toggle("active");
-            this.nextElementSibling.classList.toggle("show");
-        }
-    }
+// Iterate to add event listeners
+acc.forEach(item => {
+    item.addEventListener('click', function () {
+        // When it's clicked, loop through all the items
+        acc.forEach(el => {
+            // Close any open items
+            if (el.classList.contains('active')) {
+                closeAcc(el);
+                // If it's the one that was clicked and it's closed, open it
+            } else if (el === item) {
+                openAcc(el);
+            }
+        });
+    });
+});
+
+function closeAcc (el) {
+    el.classList.remove('active');
+    el.nextElementSibling.style.maxHeight = null;
+};
+
+function openAcc (el) {
+    el.classList.add('active');
+    el.nextElementSibling.style.maxHeight = el.nextElementSibling.scrollHeight + 'px';
 }
 
-function setClass(els, className, fnName) {
-    for (var i = 0; i < els.length; i++) {
-        els[i].classList[fnName](className);
-    }
-}
 
-var $myGroup = $('#Block');
-    $myGroup.on('show','.content', function() {
-        $myGroup.find('.content').collapse('hide');
-    });
-var $myGroup = $('#Block');
-    $myGroup.on('show','.content2', function() {
-        $myGroup.find('.content2').collapse('hide');
-    });
-
-    var parcel_2 = document.getElementById("#parcel_2");   
-    var currentPos = 0;
-    
-    var requestAnimationFrame = window.requestAnimationFrame ||
-                        window.mozRequestAnimationFrame ||
-                        window.webkitRequestAnimationFrame ||
-                        window.msRequestAnimationFrame;
-   
-   function movething(){
-   currentPos+=5;
-   parcel_2.style.left = currentPos+"px";
-   
-   if(Math.abs(currentPos) >=900){
-   currentPos=300;
-   }
-
-   requestAnimationFrame(movething);
-
-  }
-  
+// const accordions = Array.from(document.getElementsByClassName("collapsible"));
+// accordions.forEach(accordion1 =>
+//   accordion1.addEventListener("click", () =>
+//     accordions.forEach(accordion2 =>
+//       accordion2.nextElementSibling.classList.toggle(
+//         "hidden",
+//         accordion1 !== accordion2 ||
+//         !accordion1.nextElementSibling.classList.contains("hidden")
+//       )
+//     )
+//   )
+// );
