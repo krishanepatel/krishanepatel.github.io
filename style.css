@@ -10,11 +10,12 @@
   background: #ffffff;
   height: 80px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
   top: 0;
+  justify-content: space-between;
   z-index: 999;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.205);
 }
@@ -26,7 +27,7 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 15px;
 }
 
 #navbar__logo {
@@ -39,7 +40,7 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  padding: 0.5rem;
+  padding: 0.25rem;
   align-items: center;
   cursor: pointer;
   text-decoration: none;
@@ -51,6 +52,8 @@
   display: flex;
   align-items: center;
   list-style: none;
+  width: 75%;
+  justify-content: space-evenly;
 }
 
 .navbar__links {
@@ -58,10 +61,11 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 150px;
+  width: 100%;
   text-decoration: none;
   height: 100%;
   transition: all 0.3s ease;
+  flex-grow: 8;
 }
 
 .navbar__btn {
