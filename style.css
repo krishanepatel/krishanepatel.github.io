@@ -381,26 +381,25 @@ padding: 1rem;
 width: 100%;
   }
 */
-  .panel{
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    font-size:1.15rem;
-    display:none;
-    overflow: auto;
-    grid-column: 1 / -1;
-    /*background: #3d72826c;*/
-    display:inline-block;
- padding: 1rem;
+  .content2{
+  background-color: lightgrey;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size:1.15rem;
+  display:none;
+  overflow: auto;
+  grid-column: 1/ -1;
+  /*background: #3d72826c;*/
+  display:inline-block;
+  padding: 1rem;
   width: 90%;
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 5;
   }
 
 
   .panel{
-    background-color: white;
+    background-color: lightgrey;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
