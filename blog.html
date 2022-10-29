@@ -86,8 +86,16 @@
             <div class = "content2" style="display:none;">
               <p>I thought I would start this blog with a really simple question, but something people often overlook and even take for granted:</p>
               <br>
-              <p style="text-align: center;"><h2 style = "text-align: center"><strong>What is behaviour?</strong></h2></p>
-              <br>
+              <div class="animated-title">
+                <div class="text-top">
+                  <div>
+                    <span>What is</span>
+                  </div>
+                </div>
+                <div class="text-bottom">
+                  <div>behaviour?</div>
+                </div>
+              </div>              <br><br><br><br><br><br><br>
               <p>Before, you close the box, take a moment to consider what this question really mean. Most of us understand behaviour as just an innate thing, behaviour is <i><strong>just</strong></i> "what we do". If we really think about that, that does not make a huge amount of sense. "<i>What we do</i>" is not enough to define behaviour as it applies to pretty much everything and nothing at the same time. If two people are both in the same setting but engaging in completely different behaviour, there feels like a disconnect between </p>
               <br>
               <p>I would ask you to hold your on to your thinking caps because we are about to delve into some strange and less strange ideas! The idea of behaviour is easy to understand when we talk about ourselves, right? In most sentences, the <strong>verb</strong> is the behaviour in question (for example Jonathon is driving to Newcastle). However, this same idea would then mean that the lawmower <strong>mowing</strong> the grass, is also behaving. Inanimate objects hold the ability to behave? </p>
@@ -191,36 +199,6 @@
         </div>
       </div>
     <script src="app.js"></script>
-
-    <script>
-      var parcel_2 = document.querySelector("#parcel_2");   
-      var box_2 = document.querySelector("#box_2");   
-
-      var currentPos = -50;
-      
-      
-      var requestAnimationFrame = window.requestAnimationFrame ||
-                          window.mozRequestAnimationFrame ||
-                          window.webkitRequestAnimationFrame ||
-                          window.msRequestAnimationFrame;
-    
-    function movething(){
-    currentPos+=0.4;
-    parcel_2.style.left = currentPos+"px";
-    box_2.style.left = currentPos+"px";
-
-    
-    if(Math.abs(currentPos) >=70){
-    currentPos=-0;
-    }
-
-    requestAnimationFrame(movething);
-
-    }
-
-    movething()
-    
-    </script>
 
       </body>
   </html>
