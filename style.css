@@ -676,69 +676,7 @@ font-size: 1.2rem;
   margin: 0.5rem;
 }
 
-#coin {
-  position: relative;
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-#coin div {
-  width: 100%;
-  height: 100%;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-     -moz-box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-          box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-}
-.side-a {
-  background-color: #bb0000;
-}
-.side-b {
-  background-color: #3e3e3e;
-}
-
-#coin {
-  transition: -webkit-transform 1s ease-in;
-  -webkit-transform-style: preserve-3d;
-}
-#coin div {
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-}
-.side-a {
-  z-index: 100;
-}
-.side-b {
-  -webkit-transform: rotateY(-180deg);
-
-}
-
-#coin.heads {
-  -webkit-animation: flipHeads 3s ease-out forwards;
-  -moz-animation: flipHeads 3s ease-out forwards;
-    -o-animation: flipHeads 3s ease-out forwards;
-       animation: flipHeads 3s ease-out forwards;
-}
-#coin.tails {
-  -webkit-animation: flipTails 3s ease-out forwards;
-  -moz-animation: flipTails 3s ease-out forwards;
-    -o-animation: flipTails 3s ease-out forwards;
-       animation: flipTails 3s ease-out forwards;
-}
-
-@-webkit-keyframes flipHeads {
-  from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
-  to { -webkit-transform: rotateY(1800deg); -moz-transform: rotateY(1800deg); transform: rotateY(1800deg); }
-}
-@-webkit-keyframes flipTails {
-  from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
-  to { -webkit-transform: rotateY(1980deg); -moz-transform: rotateY(1980deg); transform: rotateY(1980deg); }
-}
-
-
+/* Code to animate text in Blog1 - What is Behaviour?*/
 @keyframes showTopText {
   0% { transform: translate3d(0, 100%, 0); }
   40%, 60% { transform: translate3d(0, 50%, 0); }
@@ -749,7 +687,7 @@ font-size: 1.2rem;
   100% { transform: translate3d(0, 0, 0); }
 }
 .animated-title {
-  color: #222;
+  color: black;
   font-family: Roboto, Arial, sans-serif;
   height: 90vmin;
   left: 50%;
@@ -785,7 +723,7 @@ font-size: 1.2rem;
   transform: translate(0, 100%);
 }
 .animated-title > div.text-top div span:first-child {
-  color: #767676;
+  color: black;
 }
 .animated-title > div.text-bottom {
   bottom: 0;
@@ -798,3 +736,4 @@ font-size: 1.2rem;
   left: 30%;
   transform: translate(0, -100%);
 }
+
