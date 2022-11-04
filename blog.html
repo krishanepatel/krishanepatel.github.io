@@ -185,9 +185,30 @@
             Each time we come across our unit of randomisation, we flip our coin and use this to determine which group they get allocated to. Now the wise readers amongst you may see that I said <strong>unit of randomisation</strong> and not individuals. That is because there are different experimental models we can use (which I promise I will come onto at a later post), so we may be randomising individuals, but maybe households, businesses or even postcodes. In each case, the principle is same (but our analysis may change) we are randomising our things into our N groups. Usually we evenly split the sample such that each group consists of 1/n of the total sample. In this case, we have two groups, our system-as-usual group where nothing changes, and our treatment, where we incentivise energy use.
             </p>
             <p>
-            How many people do we need? That is a difficult question to answer. What you are looking for is the effect-size of your treatment
+            How many people do we need? That is a difficult question to answer. What you are looking for is the effect-size of your treatment, this is the relative difference between your groups. Larger effect sizes means its easier to find them, which means fewer people (for example, income and political affiliation). Smaller effect sizes are much harder to detect and therefore require larger samples (for example position of a menu item). One the most famous statisticians Jacob Cohen came up with a rough approximation of what could constitute small, medium and large effects (Cohen, 1988).
             </p>
-          </div>
+            <div class="table_plot">
+          <table>
+            <tr>
+              <th><u>Effect Size</u></th>
+              <th><u>Magnitude</u></th> 
+            </tr>
+            <tr>
+              <td>Small</td>
+              <td>0.2</td> 
+            </tr>
+            <tr>
+              <td>Medium</td>
+              <td>0.5</td> 
+            </tr>
+            <tr>
+              <td>Large</td>
+              <td>≥0.8</td> 
+            </tr>
+          </table>
+          The best practice is to identify from similar studies or to run potential pilot experiments. For now we can assume a small effect size of 0.2. How do we calculate this, well its best to use statistical software as I would not recommend calculating by hand! R is a fantastic tool for statistical analysis, but you can also use  <a href = "https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower" target="_blank" rel="noopener noreferrer">G*Power</a>
+            </div>
+        </div>
           <div class="blog_collapsible" class="collapsible" id="blog_block">
             <h2><strong>Coming soon!</strong></h2>
           <br></div>
