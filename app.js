@@ -34,44 +34,54 @@ for (i = 0; i < coll.length; i++) {
 
 // Accordian control
 
-var acc = document.querySelectorAll('.collapsible');
+// var acc = document.querySelectorAll('.collapsible');
 
-// Iterate to add event listeners
-acc.forEach(item => {
-    item.addEventListener('click', function () {
-        // When it's clicked, loop through all the items
-        acc.forEach(el => {
-            // Close any open items
-            if (el.classList.contains('active')) {
-                closeAcc(el);
-                // If it's the one that was clicked and it's closed, open it
-            } else if (el === item) {
-                openAcc(el);
-            }
-        });
-    });
-});
+// // Iterate to add event listeners
+// acc.forEach(item => {
+//     item.addEventListener('click', function () {
+//         // When it's clicked, loop through all the items
+//         acc.forEach(el => {
+//             // Close any open items
+//             if (el.classList.contains('active')) {
+//                 closeAcc(el);
+//                 // If it's the one that was clicked and it's closed, open it
+//             } else if (el === item) {
+//                 openAcc(el);
+//             }
+//         });
+//     });
+// });
 
-function closeAcc (el) {
-    el.classList.remove('active');
-    el.nextElementSibling.style.maxHeight = null;
-};
+// function closeAcc (el) {
+//     el.classList.remove('active');
+//     el.nextElementSibling.style.maxHeight = null;
+// };
 
-function openAcc (el) {
-    el.classList.add('active');
-    el.nextElementSibling.style.maxHeight = el.nextElementSibling.scrollHeight + 'px';
+// function openAcc (el) {
+//     el.classList.add('active');
+//     el.nextElementSibling.style.maxHeight = el.nextElementSibling.scrollHeight + 'px';
+// }
+
+
+var acc = document.getElementsByClassName("blog_collapsible");
+var panel = document.getElementsByClassName('content2');
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+    	var setClasses = !this.classList.contains('active');
+        setClass(acc, 'active', 'remove');
+        setClass(panel, 'show', 'remove');
+        
+       	if (setClasses) {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
 }
 
+function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+        els[i].classList[fnName](className);
+    }
+}
 
-// const accordions = Array.from(document.getElementsByClassName("collapsible"));
-// accordions.forEach(accordion1 =>
-//   accordion1.addEventListener("click", () =>
-//     accordions.forEach(accordion2 =>
-//       accordion2.nextElementSibling.classList.toggle(
-//         "hidden",
-//         accordion1 !== accordion2 ||
-//         !accordion1.nextElementSibling.classList.contains("hidden")
-//       )
-//     )
-//   )
-// );

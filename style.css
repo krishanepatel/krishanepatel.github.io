@@ -353,7 +353,7 @@
     grid-template-columns: repeat(4, 1fr);
     margin: 1rem;
   }
-  .collapsible {
+  .blog_collapsible {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -396,6 +396,11 @@ width: 100%;
   grid-column-start: 1;
   grid-column-end: 5;
   }
+
+  div.content2.show {
+    display: block !important;
+  }
+
 
 
   .panel{
@@ -692,7 +697,7 @@ font-size: 1.2rem;
   height: 90vmin;
   left: 50%;
   position: absolute;
-  top: 53%;
+  top: 54%;
   transform: translate(-50%, -50%);
   width: 50vmin;
 }
@@ -712,7 +717,7 @@ font-size: 1.2rem;
 }
 .animated-title > div.text-top {
   /* border-bottom: 0.5vmin solid #000; */
-  left: 60%;
+  left: 0%;
   top: 0;
 }
 .animated-title > div.text-top div {
