@@ -167,13 +167,16 @@
             <h2><strong>Trials or (the marketplace of ideas)</strong></h2>
             <br></div>
             <div class = "content2" style="display:none;">  
-<!-- Interested in how to design an experiment?? Stay tuned here! -->
-            <h2>Learn to design and run experiments!</h2> <br>
+Interested in how to design an experiment?? Stay tuned here!
+            <!-- <h2>Learn to design and run experiments!</h2> <br>
 
               <p>
               How can we be sure that an idea is a good one? Is that drug effective? Is this drug better than that drug? These questions all tap into the scientific world of <u><strong>experimentation</strong></u>. This is one of my favourite things to teach because most people think they understand how experiments and hypothesis testing works, but its actually counter-intuitive and a lot of people fall into the same trap, misunderstanding how to compare two these competing ideas.</p><br>
               <p>
-              Let's take a look at a really simple experiment. In this experiment, let's say we are interested in whether <a href="https://www.bbc.co.uk/news/business-63329233">incentivising energy use at night reduces pressure on the National Grid</a>. This is our <strong><u>hypothesis</u></strong>, our hypothesis is the thing we are interested in. This can be <u>directional</u> or <u>non-directional</u>, but this is fancy academic talk for the hypothesis says there is some idea about how we rank our conditions, or we have no idea whether there is any difference. Directional hypothesis are more common than you might think, and one of the main reasons is that these are more powerful as a statistical test (this means we are more likely to find a result given that it exists). One of the best metaphors of experimental is the "great marketplace of ideas". What you are really doing here is comparing two ideas and seeing how much evidence you have in favour or against one of these ideas.</p>
+              Let's take a look at a really simple experiment. In this experiment, let's say we are interested in whether <a href="https://www.bbc.co.uk/news/business-63329233">incentivising energy use at night reduces pressure on the National Grid</a>. This is our <strong><u>hypothesis</u></strong>, our hypothesis is the thing we are interested in. This can be <u>directional</u> or <u>non-directional</u>, but this is fancy academic talk for the hypothesis says there is some idea about how we rank our conditions, or we have no idea whether there is any difference. Directional hypothesis are more common than you might think, and one of the main reasons is that these are more powerful as a statistical test (this means we are more likely to find a result given that it exists). One of the best metaphors of experimental is the "great marketplace of ideas". What you are really doing here is comparing two ideas and seeing how much evidence you have in favour or against one of these ideas. You compare your hypotheses (H<sub>1,2,3...N</sub>) against a comparator or null hypothesis (H<sub>0</sub>). Now what the null hypothesis entails is up to you, but ideally you dont want to straw-man this issue. The best comparison is current practice (now that may not be anything there but that is also current practice) or otherwise the next best thing. In oncology for instance, it would not really ideal to compare your cancer treatment against no treatment at all. Ideally you write your hypotheses out:<br><br>
+            H<sub>0</sub>: There is no difference between the groups.<br>
+            H<sub>1</sub>: Incentivising energy usage at night reduces the power usage in day-time.<br>
+          </p>
               <br><div style="text-align: center; display: flex; justify-content: center;">
                 <img src="Images/marketplace.png" alt="Image of marketplace" width=65% height = 25%>
               <br></div> 
@@ -183,8 +186,19 @@
             </p><br>
             <p> 
             Each time we come across our unit of randomisation, we flip our coin and use this to determine which group they get allocated to. Now the wise readers amongst you may see that I said <strong>unit of randomisation</strong> and not individuals. That is because there are different experimental models we can use (which I promise I will come onto at a later post), so we may be randomising individuals, but maybe households, businesses or even postcodes. In each case, the principle is same (but our analysis may change) we are randomising our things into our N groups. Usually we evenly split the sample such that each group consists of 1/n of the total sample. In this case, we have two groups, our system-as-usual group where nothing changes, and our treatment, where we incentivise energy use.
-            </p>
+            </p><br>
             <p>
+              Once we have randomised all our inputs, we run the treatment. It is imperative that everything remains consistent, you do not deviate from the plan unless it is absolutely critical (ethical or legal ramifications aside). Altering the treatment or control invalidates the experiment and you end up introducing a form of bias that skews the results. Once the study is complete, we analyse the results, this is achieved by converting our experimental model into a mathematic model. In this case we have two treatments, and we are interested in knowing whether there is some change in our measure of energy usage. Most of the time, we can analyse using linear models, meaning that we infer a linear relationship between our treatment groups (There are other assumptions that we believe when running linear models but that is best for another time). Written below is a crude model:<br>
+              Energy Usage in day <sub>i</sub> = &#946<sub>0</sub> + &#946<sub>1</sub> Treatment<sub>i</sub> + &#949<sub>i</sub><br><br>
+              There are a few symbols here, so let me just explain some of this: &#946<sub>0</sub> is our intercept, its where our line intersects the y-axis, in our case we can interpret this as the average level of energy before we add any change from the result of our treatment. &#949 is our error term, in any model there is going to be some discrepancy between predictions and actual values, this deviation is captured in the error term (along with other effects that are not included such as age, household size and so forth).  &#946<sub>1</sub> is our treatment effect, as we mapped our treatment allocation into a numerical, categorical variable (1 if treatment, 0 if control). The result of this translation is as follows, all the control people become removed from this term (as anything * 0 = 0), this leaves only people who recieved the treatment in this term. The <sub>i</sub> is the notation that this model is applied for each unit i, in our case individuals. From these snippets we can actually infer the meaning of the results for our two groups:<br><br> 
+              The control group is expressed as &#946<sub>0</sub><br>
+              The treatment group is expressed as &#946<sub>0</sub> + &#946<sub>1</sub><br>
+              Therefore &#946<sub>1</sub> denotes the magnitudinal difference between the two groups. If our test for this coefficient is significant, then we can determine that with a reasonable estimation, our treatment does reduce energy usage in the day. What this means is that we run a statistical test on our coefficient, when the statistical test reaches a certain value, it can be translated in a p-value. P-values are the probability of accepting that the null hypothesis is true. The smaller the p-value the less likely that this test occurs by chance, and therefore we can say that these differences are significant. 
+            </p>
+            <p>There you go, that in a nutshell is how you run an experiment</p>
+
+             -->
+            <!-- <p>
             How many people do we need? That is a difficult question to answer. What you are looking for is the effect-size of your treatment, this is the relative difference between your groups. Larger effect sizes means its easier to find them, which means fewer people (for example, income and political affiliation). Smaller effect sizes are much harder to detect and therefore require larger samples (for example position of a menu item). One the most famous statisticians Jacob Cohen came up with a rough approximation of what could constitute small, medium and large effects (Cohen, 1988).
             </p>
             <div class="table_plot">
@@ -206,8 +220,8 @@
               <td>≥0.8</td> 
             </tr>
           </table>
-          The best practice is to identify from similar studies or to run potential pilot experiments. For now we can assume a small effect size of 0.2. How do we calculate this, well its best to use statistical software as I would not recommend calculating by hand! R is a fantastic tool for statistical analysis, but you can also use  <a href = "https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower" target="_blank" rel="noopener noreferrer">G*Power</a>
-            </div>
+          The best practice is to identify from similar studies or to run potential pilot experiments. For now we can assume a small effect size of 0.2. How do we calculate this, well its best to use statistical software as I would not recommend calculating by hand! R is a fantastic tool for statistical analysis, but you can also use  <a href = "https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower" target="_blank" rel="noopener noreferrer">G*Power</a>. 
+            </div> -->
         </div>
           <div class="blog_collapsible" class="collapsible" id="blog_block">
             <h2><strong>Coming soon!</strong></h2>
