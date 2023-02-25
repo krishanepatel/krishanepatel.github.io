@@ -758,3 +758,8 @@ table, th, td {
   align-items: center;
   align-content: center;
 }
+
+
+.flex-container {
+  display: flex;
+}
