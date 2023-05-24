@@ -763,3 +763,10 @@ table, th, td {
 .flex-container {
   display: flex;
 }
+
+
+#home{
+  font-size: 2rem;
+  padding:2rem;
+  margin: 2rem;
+}
