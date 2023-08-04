@@ -284,6 +284,7 @@
   .About__image{
     float: left;
     padding: 1.5rem;
+    margin: 2rem;
   }
   .About__text{
     padding: 0rem;
@@ -300,7 +301,7 @@
 
   .About__heading{
     line-height:1.6rem;
-    text-align: left;
+    text-align: center;
     margin: 0.8rem;
     min-height: 100%;
   }
