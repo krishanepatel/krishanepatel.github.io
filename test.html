@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x2 Grid with CSS Grid</title>
+    <style>
+        .blog-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            /* Responsive column sizes */
+            grid-template-rows: repeat(2, 1fr);
+            /* Two equal rows */
+            gap: 10px;
+            /* Space between grid items */
+            height: 300px;
+            /* Fixed height for the grid */
+        }
+
+        .large_blog_homepage {
+            grid-column: 1 / 3;
+            /* Span across the first two columns */
+            grid-row: 1 / 3;
+            /* Span across both rows */
+            background-color: lightblue;
+        }
+
+        .small1_blog_homepage {
+            grid-column: 3;
+            /* Third column */
+            grid-row: 1;
+            /* First row */
+            background-color: lightcoral;
+        }
+
+        .small2_blog_homepage {
+            grid-column: 3;
+            /* Third column */
+            grid-row: 2;
+            /* Second row */
+            background-color: lightgreen;
+        }
+
+        .blog_homepage-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blog-grid-container">
+        <div class="blog_homepage-item  large_blog_homepage">Large 2x2</div>
+        <div class="blog_homepage-item  small1_blog_homepage">Small 1</div>
+        <div class="blog_homepage-item  small2_blog_homepage">Small 2</div>
+    </div>
+
+</body>
+
+</html>

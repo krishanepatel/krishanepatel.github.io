@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js with Significance</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        // Data from R
+        const labels = ["optimal", "divers_2", "divers_3", "matching_2", "matching_3"];
+        const interestEarned = [320, 282.31, 270.99, 290.5, 275.4];
+        const lowerBound = [310, 270, 260, 280, 265];
+        const upperBound = [330, 295, 285, 300, 285];
+        const interestWithSignificance = ["320", "282.31*", "270.99*", "290.5", "275.4*"]; // with significance
+
+        // Create the chart
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Interest Earned (£)',
+                    data: interestEarned,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            // Custom tooltip to add asterisks for significance
+                            label: function (tooltipItem) {
+                                return interestWithSignificance[tooltipItem.dataIndex] + " (£)";
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
