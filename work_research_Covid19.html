@@ -663,7 +663,7 @@
     let vaccineBeliefChart;  // To store chart instance
 
     // Fetch data from the JSON file and create the chart
-    fetch('riskCompensationData.json')
+    fetch('code/riskCompensationData.json')
         .then(response => response.json())
         .then(data => {
             const meanVaccineBelief = data.reduce((sum, d) => sum + d['vaccine_belief.centre'], 0) / data.length;
