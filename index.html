@@ -213,47 +213,51 @@
   <!-- Form Submission Script -->
   <script>
     document.getElementById('formId').addEventListener('submit', async function (event) {
-      event.preventDefault();
+  event.preventDefault(); // Prevent the default form submission
 
-      const form = event.target;
-      const formData = new FormData(form);
-      const submitButton = document.getElementById('formSubmit');
-      const submitText = document.getElementById('submitText');
-      const spinner = document.getElementById('spinner');
+  const form = event.target;
+  const formData = new FormData(form); // Collect form data
+  const submitButton = document.getElementById('formSubmit');
+  const submitText = document.getElementById('submitText');
+  const spinner = document.getElementById('spinner');
 
-      spinner.style.display = 'inline-block';
-      submitText.style.display = 'none';
+  // Show spinner and hide submit text
+  spinner.style.display = 'inline-block';
+  submitText.style.display = 'none';
 
-      const startTime = Date.now();  // Capture start time for debugging
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        });
-
-        const endTime = Date.now();  // Capture end time
-        console.log(`Form submission took ${endTime - startTime}ms`);  // Log the time
-
-        if (response.ok) {
-          submitButton.innerHTML = "Form submitted successfully!";
-          setTimeout(() => {
-            submitButton.innerHTML = `<p id="submitText">Submit</p><div id="spinner" class="spinner" style="display: none;"></div>`;
-            form.reset();
-          }, 1500);  // Reduced timeout to 1.5 seconds
-        } else {
-          const data = await response.json();
-          throw new Error(data.error || 'Form submission failed');
-        }
-      } finally {
-        spinner.style.display = 'none';
-        submitText.style.display = 'inline-block';
-      }
+  try {
+    // Send the form data via fetch
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData, // Pass FormData directly
     });
+
+    if (response.ok) {
+      // Success: Display success message
+      submitButton.innerHTML = "Form submitted successfully!";
+      setTimeout(() => {
+        // Reset form and button after 1.5 seconds
+        submitButton.innerHTML = `
+          <p id="submitText" style="font-weight: 450; font-size: 1.125rem;">Submit</p>
+          <div id="spinner" class="spinner" style="display: none;"></div>
+        `;
+        form.reset();
+      }, 1500);
+    } else {
+      // Error: Log response or display an error
+      const errorData = await response.json();
+      console.error('Form submission failed:', errorData);
+      alert('Something went wrong. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error during form submission:', error);
+    alert('There was an issue submitting the form.');
+  } finally {
+    // Hide spinner and show submit text
+    spinner.style.display = 'none';
+    submitText.style.display = 'inline-block';
+  }
+});
 
   </script>
   <script>
